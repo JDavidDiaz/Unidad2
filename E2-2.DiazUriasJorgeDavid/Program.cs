@@ -23,11 +23,10 @@ namespace E2_2.DiazUriasJorgeDavid
             }
             Console.WriteLine("Tiempo en ejecucion: {0}", Cronometro1.Elapsed);
             Console.WriteLine("\nSucesion Con Metodo de Recursividad:\n");
-            Recursividad Sucesion2 = new Recursividad();
             Stopwatch Cronometro2 = Stopwatch.StartNew();
             for (int j = 0; j < Numero; j++)
             {
-                Console.WriteLine(Sucesion2.Recursivity(j));
+                Console.WriteLine(Sucesion.Recursivity(j));
             }
             Console.WriteLine("Tiempo en ejecucion: {0}", Cronometro2.Elapsed);
             Console.ReadKey();
