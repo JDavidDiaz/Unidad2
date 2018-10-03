@@ -9,6 +9,9 @@ namespace E2_2.DiazUriasJorgeDavid
 {
     class Fibonacci
     {
+        int NumInicio = 0;
+        int Suma;
+        int NumSiguiente = 1;
         public int Iteractivo(int n)
         {
             int NumInicio = 0;
@@ -25,11 +28,16 @@ namespace E2_2.DiazUriasJorgeDavid
         {
             if (n < 2)
             {
-                return n;
+                Console.WriteLine(NumInicio);
+                return 1;
             }
             else
             {
-                return Recursivity(n - 1) + Recursivity(n - 2);
+                Suma = NumInicio;
+                NumInicio = NumSiguiente;
+                NumSiguiente = Suma + NumSiguiente;
+                Console.WriteLine(Suma);
+                return Recursivity(n-1);            
             }
         }
     }

@@ -16,19 +16,16 @@ namespace E2_2.DiazUriasJorgeDavid
             Numero = int.Parse(Console.ReadLine());
             Console.WriteLine("\nSucesion Con ciclo FOR:\n");
             Fibonacci Sucesion = new Fibonacci();
-            Stopwatch Cronometro1 = Stopwatch.StartNew();
+            Stopwatch Cronometro = Stopwatch.StartNew();
             for (int i = 0; i < Numero; i++)
             {
                 Console.WriteLine(Sucesion.Iteractivo(i));
             }
-            Console.WriteLine("Tiempo en ejecucion: {0}", Cronometro1.Elapsed);
-            Console.WriteLine("\nSucesion Con Metodo de Recursividad:\n");
-            Stopwatch Cronometro2 = Stopwatch.StartNew();
-            for (int j = 0; j < Numero; j++)
-            {
-                Console.WriteLine(Sucesion.Recursivity(j));
-            }
-            Console.WriteLine("Tiempo en ejecucion: {0}", Cronometro2.Elapsed);
+            Console.WriteLine("Tiempo en ejecucion: {0}", Cronometro.Elapsed);
+            Cronometro.Restart();
+            Console.WriteLine("\nSucesion Con metodo de recurisvidad:\n");
+            Sucesion.Recursivity(Numero);
+            Console.WriteLine("Tiempo en ejecucion: {0}", Cronometro.Elapsed);
             Console.ReadKey();
         }
     }
