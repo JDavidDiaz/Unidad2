@@ -27,7 +27,7 @@ namespace PE_2.DiazUriasJorgeDavid
             Console.Clear();
 
             //2do Programa
-            Console.WriteLine("2.-Programa de algoritmo recursivo para encontrar el minimo de una sucesion\n");
+            Console.WriteLine("2.-Programa de algoritmo recursivo para encontrar el maximo de una sucesion\n");
             int Numero2;
             Console.WriteLine("Ingresa el limite de numeros para la sucesion");
             Numero2 = int.Parse(Console.ReadLine());
